@@ -1,11 +1,26 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Hola, soy Keidys Camacho. Mi cedula es: 31.302.062. Seccion 2 de programacion III</h1>
+<%- include('header') -%>
+<body>
     
-  </body>
+    
+  <main>
+   <h1>Mis Datos Personales</h1>
+   <ul>
+      <li>Keidys Camacho</li>
+      <li>C.i: 31.302.062</li>
+      <li>Seccion: 2</li>
+      
+   </ul>
+  </main>
+
+     
+
+  <a href='/login' id='botonProductos'>Admin</a>
+
+   <%- include('footer') -%>
+  
+</body>
+
 </html>
