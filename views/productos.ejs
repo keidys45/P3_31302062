@@ -9,7 +9,7 @@
 </head>
 <body>
  <header>
-  <h1>Teclados Computer</h1>
+  <h2>Teclados Computer</h2>
   <nav>
     <ul>
       <li><a href="/login">Inicio </a></li>
@@ -46,9 +46,9 @@
               <td><%=producto.calidad%></td>
               <td><%=producto.cantidad%></td>
               <td class="icon">
-              <a href="/update/<%= producto.producto_id%>"><img src="/img/editar.jpg" width="30"></a>
-              <a href="/delete/<%= producto.producto_id%>"><img src="/img/delete.png" width="30" id="delete"></a>
-              <a href="/addImagen">Imagen</a>
+                <a href="/update/<%= producto.producto_id%>"><img src="/img/editar.jpg" width="30"></a>
+                <a href="/delete/<%= producto.producto_id%>"><img src="/img/delete.png" width="30" id="delete"></a>
+                <a href="/addImagen/<%= producto.producto_id%>">Imagen</a>
              </td>
             </tr>
            <%}%>

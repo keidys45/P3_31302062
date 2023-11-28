@@ -58,7 +58,7 @@ input {
 }
 
 input:hover, textarea:hover{
-    border: solid 3px  rgb(0, 0, 0);
+    
     background-color: rgb(255, 254, 254);
     
 }
@@ -283,8 +283,8 @@ textarea {
 			background:rbg(0,0,0,.8);
 		}
 		input{
-			padding:10px;
-			margin:10px;
+			padding:18px;
+			margin:1px;
 		}
 		label{
 			font-size: 30px;
