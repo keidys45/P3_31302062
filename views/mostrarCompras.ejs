@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Compras</title>
+  <style type="text/css" >
+
+.tablee{
+      overflow:auto;
+      background:rgba(0,0,0,.7);
+      width:95%;
+      height:60vh;
+      margin:50px auto;
+    }
+    @font-face{
+          font-family:'dar';
+          src:url('/fuentes/GnarlyBoneBlack_PERSONAL_USE_ONLY.otf');
+        }
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+h1 {
+    color: rgb(248, 246, 246);
+    text-align: center;
+    margin: 50px auto;
+    font-family: ru;
+    background-color: rgba(123, 33, 146, 0.9);
+    width: 30%;
+    
+   
+}
+
+body{
+  background-image:url('/img/porta.jpg');
+background-size:cover;
+background-attachment:fixed;
+}
+.table{
+  overflow: auto;
+    background: rgba(0,0,0,.7);
+    width: 95%;
+    height: 50vh;
+    margin: 50px auto;
+}
+table{
+ color:white;
+ width:100%;
+ font-size:20px;
+}
+
+span{
+	font:50px 'dar';
+
+}
+td{
+	text-align:center;
+}
+
+#add{
+ height:5vh;
+}
+th{
+	padding:20px;
+}
+#botones{
+	display:flex;
+	justify-content: flex-end;
+	align-items: center;
+	 border:1px solid white;
+	 background:rgba(0,0,0,.7);
+	 border-top:none;
+	 border-left:none;
+	 border-right:none;
+}
+#botones a{
+	border-radius:15px 10px 20px 10px;
+	font:23px 'dar';
+	padding:20px;
+	text-decoration: none;
+	color:white;
+	transition: all 1s;
+}
+#botones a:hover{
+transform: translateY(-10px);
+}
+table tr{
+	transition: all 1.4s;
+}
+table tr:hover{
+	background:rgba(135, 215, 233,.5);
+}
+header > h2::first-letter{
+	color:rgba(123, 33, 146, 0.9);
+	font-weight: 900;
+	font-size: 40px;
+
+}
+h2{
+	color:rgb(243, 243, 243);
+	text-align:center;
+	margin:50px auto;
+	font-family:ru;
+	font-size:40px;
+	
+}
+header{
+	width: 100%;
+	height: 100px;
+	background-color:rgb(145, 145, 145);
+	border-bottom: dashed 0px rgb(0,0,0);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	box-shadow: 7px 14px 16px rgb(75, 75,75, 0.747 );
+
+}
+nav ul {
+	width:  100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+  }
+  
+  nav ul li {
+	list-style: none;
+  }
+  
+  nav ul li a {
+	padding: 10px 20px;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: "Montserrat";
+  }
+  nav ul li a:hover {
+	border-bottom:solid 1.5px white;
+  }
+ 
+
+ 
+  </style>
+  
+</head>
+<body>
+  <header>
+    <h2>Teclados Computer</h2>
+    <nav>
+      <ul>
+  
+  
+      <li><a href="/">Inicio </a></li>
+      <li><a href="/usuarios">Users</a></li>
+      <li><a href="/compras">Compras</a></li>
+      <li><a href="/productos">Productos</a></li>
+      <li><a href="/add">Agregar Producto</a></li>
+      <li><a href="/categorias">Categoria</a></li>
+    </ul>
+  </nav>
+ </header>
+
+
+  <h1>Compras Registradas</h1>
+  <div class="table">
+    <table >
+        <tr>
+            <th>ID</th>
+            <th>Nombre Usuario</th>
+            <th>Apellido</th>
+            <th>Cedula</th>
+            <th>Nombre del Producto</th>
+            <th>Cliente_id</th>
+            <th>Producto_id</th>
+            <th>Cantidad</th>
+            <th>Total_pagado</th>
+            <th>fecha</th>
+            <th>ip_cliente</th>
+            <th>codigo</th>
+            <th>Nºtarjeta</th>
+            <th>Cvv</th>
+            <th>MesV</th>
+            <th>year</th>
+            <th>currency</th>
+            <th>Descripcion</th>
+            <th>Opcion</th>
+          </tr>
+          <%for(const compra of modelo){%>
+            <tr>
+                <td><%=compra.compras_id%></td>
+                <td><%=compra.nombre_de_usuario%></td>
+                <td><%=compra.apellido%></td>
+                <td><%=compra.cedula%></td>
+                <td><%=compra.nombre_producto%></td>
+                <td><%=compra.cliente_id%></td>
+                <td><%=compra.producto_id%></td>
+                <td><%=compra.cantidad%></td>
+                <td><%=compra.total_pagado%></td>
+                <td><%=compra.fecha%></td>
+                <td><%=compra.ip_cliente%></td>
+                <td><%=compra.codigo%></td>
+                <td><%=compra.numeroT%></td>
+                <td><%=compra.cvv%></td>
+                <td><%=compra.mesV%></td>
+                <td><%=compra.year%></td>
+                <td><%=compra.currency%></td>
+                <td><%=compra.descripcion%></td>
+                <td class="icon">
+                <a href="/deleteCompra/<%= compra.compras_id%>"><img src="/img/14.png" width="30" id="delete"></a>
+                
+               </td>
+              </tr>
+           <%}%>
+        </table>
+       
+  </div>
+ 
+</body>
+</html>
