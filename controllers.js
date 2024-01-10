@@ -353,6 +353,7 @@ app.get('/*',(req,res)=>{
 res.render('notfound.ejs');
 });
 //-------------------------------------------------------
-server.listen(5000,()=>{
+const port = 5000;
+server.listen(port,()=>{
   console.log(`Servidor corriendo exitosamente en el puerto ${port}`);
 });
