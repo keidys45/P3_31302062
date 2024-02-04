@@ -632,7 +632,7 @@ function addUsersPost(req, res) {
 function recoverPassword(req, res) {
   const { correo } = req.body;
   const sql = "SELECT * FROM usuarios WHERE correo = ?";
-  db.get(sql, [correo], (err, row) => {
+  db.all(sql, [correo], (err, row) => {
     if (row.length == 0) {
       res.send('No encontrado')
     } else {
@@ -653,7 +653,7 @@ function recoverPassword(req, res) {
         from: process.env.EMAIL,
         to: correo,
         subject: 'Restablecimiento de contraseña',
-        html: `<h1>¡Hola!</h1><p>Correo:${correo}</p><p>Contraseña:${row.password}`
+        html: `<h1>¡Hola!</h1><p>Correo:${correo}</p><p>Contraseña:${row[0].password}`
         // html body
       };
 
