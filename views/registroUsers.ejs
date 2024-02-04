@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<style type="text/css" >
+
+@font-face{
+	font-family:'michu';
+	src:url(/fuentes/Lost_Paper.ttf);
+}
+		body{
+			background: rgba(42, 86, 153);
+}
+#login{
+	width: 400px;
+	background: 7px 13px 37px #545;
+	padding: 30PX; 
+	margin:auto;
+	margin-top: 10PX;
+	border-radius: 20px;
+
+	color: #ffffff;
+	box-shadow: 7px 13px 37px #e2df;
+	
+}
+label{
+	font-weight: bold;
+	font-size: 30px;
+	color:white;
+	margin:30px auto;
+	font:2rem 'fuenteNueva';
+}
+h1{
+	display:flex;
+			justify-content: center;
+			align-items: center;
+			margin:50px auto;
+			font: 7rem 'michu';
+			font-size: 250%;
+			
+}
+form{
+	display:flex;
+	flex-direction: column;
+    
+}
+input{
+padding:8px;
+
+text-align: center;
+width:40%;
+margin: auto;
+}
+#iniciar{
+	
+	padding: 7px;
+	margin-top: 25px;
+	
+}
+
+p{
+	color: black;
+}
+.g-recaptcha{
+	margin-top: 25px; display: flex; justify-content: center; align-items: center;
+}
+
+#botonR {
+    width: 14%;
+    background-color: beige;
+    border-radius: 2px;
+    border: 2px;
+    padding: 10px;
+    color: black;
+    margin: 10px 0;
+	
+    font-size: 18px;
+}
+
+</style>
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+</head>
+<body>
+ <h1 class="login">Registro para nuestros nuevos clientes</h1>
+<div id="login">
+
+	<form class="login_form" action="/registroUsuariosPost" method="post">
+
+
+        <label>Nombre</label>
+		<input type="text" name="nombre" required>
+
+        <label>Apellido</label>
+        <input type="text" name="apellido" required>
+
+        <label>Cedula</label>
+        <input type="number" name="cedula" required>
+
+
+			<label>Correo</label>
+			<input type="email" name="email" required="required">
+	
+			<label >Contraseña</label>
+			<input type="password" name="contrasena" required="required">
+            <div class="g-recaptcha" data-sitekey="6Lcb10spAAAAANs_jKidBkcmYWCW5g5wXf_r_Ehl">
+			</div>
+			<input type="submit"  value="Registrar" id='iniciar'>	
+	       
+			
+			<p style='font-size: 17px; text-align: center;'>Haz click en Login para iniciar sesion</p>
+            <a href="/loginUsers" style='margin-left:43%;text-align:center;' id="botonR" >Login</a>
+	</form>
+</div>
+</body>
+</html>
+
+
+

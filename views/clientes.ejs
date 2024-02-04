@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:title" content="Pag web" />
+    <meta property="og:type" content="teclados" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <title>Teclados Computer</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/6a430499cd3c3b66f3a0d94eaa9cc3d2.jpg" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+
+
+
+
+
+   
+
+
+</html>
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/clientes.css">
+
+<script type="text/javascript" src="/js/alert.js"></script>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style='background:rgb(113 110 110);'>
+        <div class="container">
+
+
+            <div class="row input-group-newsletter">
+                <div class="col">
+
+                    <input class="form-control" id="buscarPrincipal" type="search" placeholder="Buscar Producto..."
+                        aria-label="Buscar Producto..." />
+                </div>
+
+                <div class="col-auto">
+                    <button id='botonP' onclick="buscarProductos()">Buscar</button>
+                </div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productosH2">Producto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Cerrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="masthead-subheading">Bienvenido a Mi Tienda</div>
+            <div class="masthead-heading text-uppercase">Teclados Computer</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#services">Cuentame mas</a>
+        </div>
+    </header>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">SERVICIOS</h2>
+                <h3 class="section-subheading text-muted">Asegurate de tener los mejores productos</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Tienda Online</h4>
+                    <p class="text-muted">Brindamos una interfaz sencilla y esplendida mediante esta pagina de venta en
+                        linea</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Enfoque de Peticion de Usuario</h4>
+                    <p class="text-muted">Tenemos variedad de productos que son acorde a tus necesidades </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Inspiracion hacia nuestros clientes</h4>
+                    <p class="text-muted">Nuestro objetivo es conocer y generar confianza en nuestros clientes y ofrecer
+                        el mejor producto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Grid-->
+
+
+
+
+    <section class="py-5">
+        <h2 class="section-heading text-uppercase" id='productosH2'>PRODUCTOS</h2>
+        <div class="container my-5">
+            <div class="row justify-content-center">
+
+                <button id='botonCuadricula' style='width:5vw;background:transparent;margin-left:98%;border:none'
+                    onClick="cuadricula()"><img src="../img/mmm.jpg" style='width:100%;border:none'></button>
+
+                <div class='product' id='listaDeProductos'>
+
+                    <%for(let x=0;x < producto.length;x++){%>
+
+                        <div class='productooo'>
+
+                            <img src="<%= producto[x].imagen_url %>" class='imagen' id='imagenSelector'>
+                            <br>
+
+                            <div id='NPB'>
+
+                                <div
+                                    style='display:flex;flex-direction: column;justify-content:center;align-items:center'>
+                                    <strong>
+                                        <p>Nombre:
+                                    </strong>
+                                    <%= producto[x].nombre %>
+                                        </p>
+                                        <strong>
+                                            <p>Valoracion del producto:
+                                        </strong>
+                                        <%= producto[x].puntos %>%
+                                            </p>
+                                        <strong>
+                                            <p>Precio:
+                                        </strong><span style='color:green'>
+                                            <%= producto[x].precio %> $
+                                        </span></p>
+
+                                </div>
+
+                                <div id='comprarDetalles'>
+
+                                    <button id='botonP'
+                                        onclick="window.location.href='/comprar/<%=producto[x].producto_id%>'">Comprar
+                                    </button>
+                                    <a href="/detalles/<%=producto[x].producto_id%>"
+                                        style='margin-top:7px;margin-left:8px;'>Detalles</a>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <% } %>
+                            <!-------------------->
+                            <table class='table'>
+
+                                <thead>
+                                    <tr style='border:1px solid black'>
+
+                                        <th class='column'>Imagen</th>
+                                        <th class='column'>Nombre</th>
+                                        <th class='column'>Codigo</th>
+                                        <th class='column'>Precio</th>
+                                        <th class='column'>Descripcion</th>
+                                        <th class='column'>Calidad</th>
+                                        <th class='column'>Cantidad</th>
+                                        <th class='column'>Categoria</th>
+                                        <th class="column">Valoracion del producto</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <%for(let u=0;u < producto.length;u++){%>
+                                        <tr class='tr' style='border:1px solid black'><!--ul-->
+                                            <!--li-->
+                                            <td class='column'><img src="<%= producto[u].imagen_url %>"
+                                                    style='width:100%;height:17vh'></td>
+                                            <td class='column'>
+                                                <%= producto[u].nombre %>
+                                            </td>
+                                            
+                                            <td class='column'>
+                                                <%= producto[u].codigo %>
+                                            </td>
+                                            <td class='column'>
+                                                <%= producto[u].precio %>
+                                            </td>
+                                            <td class='column'>
+                                                <%= producto[u].descripcion %>
+                                            </td>
+                                            <td class='column'>
+                                                <%= producto[u].calidad %>
+                                            </td>
+                                            <td class='column'>
+                                                <%= producto[u].cantidad %>
+                                            </td>
+                                            <td class='column'>
+                                                <%= producto[u].categoria_id %>
+                                            </td>
+                                            <td class='column'>
+                                                <%= producto[u].puntos %>
+                                            </td>
+                                        </tr>
+                                        <% } %>
+                                </tbody>
+                            </table>
+                            <%for(let l=0 ; l < producto.length; l++){%>
+                                <ul class='ULtabla3'>
+                                    <li class='LItabla3'><img src="<%= producto[l].imagen_url %>" style='width:40%;'>
+                                    </li>
+                                    <li class='LItabla3'><span>Nombre: </span><span>
+                                            <%= producto[l].nombre %>
+                                        </span></li>
+                                    <li class='LItabla3'><span>Codigo: </span><span>
+                                            <%= producto[l].codigo %>
+                                        </span> </li>
+                                    <li class='LItabla3'><span>Precio: </span><span>
+                                            <%= producto[l].precio %>
+                                        </span> </li>
+                                    <li class='LItabla3'><span>Descripcion: </span><span>
+                                            <%= producto[l].descripcion %>
+                                        </span></li>
+                                    <li class='LItabla3'><span>Color: </span><span>
+                                            <%= producto[l].color %>
+                                        </span></li>
+                                    <li class='LItabla3'><span>Peso: </span><span>
+                                            <%= producto[l].peso %>
+                                        </span></li>
+                                    <li class='LItabla3'><span>Categoria: </span><span>
+                                            <%= producto[l]. categoria_id %>
+                                        </span></li>
+                                </ul>
+                                <% } %>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    </section>
+    <script type="text/javascript">
+        fetch('/transaction')
+            .then(res => res.json())
+            .then(respuesta => {
+                if (respuesta.message !== false) {
+                    console.log(respuesta);
+                    Swal.fire(respuesta.transaction.message)
+                        .then(() => {
+                            // Aquí la alerta se ha cerrado
+                            console.log("Alerta cerrada");
+                            fetch('/eliminarTransaction')
+                                .then(res => res.json())
+                                .then(respuesta2 => {
+                                    console.log(`Message : ${respuesta2.message}`);
+                                })
+                                .catch(error => {
+                                    console.error('*_*/-[Error]-/*_*:', error);
+                                });
+                        });
+
+                    console.log(respuesta.transaction.message, 'respuesta del server');
+                } else {
+                    console.log('No se recibio respuesta of the transaction');
+                }
+
+            })
+    </script>
+    <!-- Core theme JS-->
+    <script src="/js/script.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+</body>
+
+</html>

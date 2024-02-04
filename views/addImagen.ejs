@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Imagen</title>
-	<link rel="stylesheet" type="text/css" href="/css/update.css">
+
 	
-	
-</head>
- <header>
-    <h1>Teclados Computer</h1>
-    <nav>
-      <ul>
-        <li><a href="/productos">Volver </a></li>
-        
-        
-      </ul>
-    </nav>
-   </header>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Imagen</title>
+		<link rel="stylesheet" type="text/css" href="/css/update.css">
+		
+		
+	</head>
+
+
 <body>
 
+	<header>
+		<h1>Teclados Computer</h1>
+		<nav>
+		  <ul>
+			<li><a href="/productos">Volver </a></li>
+			
+			
+		  </ul>
+		</nav>
+	   </header>
 
-<form action="/addImagen" method="post">
-	
-	
-	
-<li><label for='imagen'>Imagen</label>
+<h1>Agregar Imagen</h1>
 
-		<input type="file" name="img" id="img" placeholder="Imagen"></li>
-		<label for="destacado">Destacado</label>
-	<input type="text" name="destacado" placeholder="Destacado" id='destacado' required="required">
+<div id='divDestacado'>
+	
+<form action="/addImagen/<%=modelo.producto_id%>" method="post" enctype="multipart/form-data">
+	
+	<label for='imagen'>Imagen</label>
+	
+	<input type="file" name="img" id="img" placeholder="Imagen">
+  
+	<label for="destacado">Destacado</label>
+	
+	<input type="number" name="destacado" value='0' id='destacado' style='text-align: center;'>
 
-	<input type="submit" value="agg Imagen" id="sendImg">
+	<input type="submit" value="add" id="destacado">
 </form>
+</div>
 
 </body>
 </html>

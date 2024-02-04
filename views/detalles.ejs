@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Buscar Teclados Computer </title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+		<style type="text/css">
+			@font-face
+			{
+			   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+				   src:url(/fuentes/HyperSuperFast.ttf);
+				  }
+			   img{
+				   width:25%;
+				   height: auto;
+				   margin:20px;
+			   }
+			   #contenedor{
+				   display:flex;
+				   justify-content: center;
+				width: 80%;
+				margin:70px auto;
+			   }
+		   
+		   </style>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/css/clientes.css" rel="stylesheet" />
+    </head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		<header>
+			<a class="navbar-brand" href="/">Teclados Computer</a>
+			
+		   
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+					
+					
+					<a href="/clientes"><button id='boton3' >Volver</button></a>
+				</ul>
+			</div>
+		</header>
+
+	</nav>
+	<br>
+	<br>
+	<br>
+<br>
+<br>
+<br>
+<br>
+<h2>Detalles del Producto</h2>
+   <div id='contenedor'>
+  <% for(let magui = 0;magui < imagenes.length;magui++){ %>
+   <img id='imgk' src="<%= imagenes[magui].url%>">
+  <% } %>
+
+   </div>
+   
+
+</body>
+</html>
+
+
+
+
+
+
+<style type="text/css">
+	@font-face{
+	   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+		   src:url(/fuentes/HyperSuperFast.ttf);
+		  }
+	   img{
+		   width:25%;
+		   height: auto;
+		   margin:20px;
+	   }
+	   #contenedor{
+		   display:flex;
+		   justify-content: center;
+		width: 80%;
+		margin:70px auto;
+	   }
+   
+   </style>
