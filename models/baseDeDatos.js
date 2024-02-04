@@ -644,16 +644,16 @@ function recoverPassword(req, res) {
           rejectUnauthorized: false,
         },
         auth: {
-          user: process.env.EMAILCLIENT,
-          pass: process.env.PASSWORDCLIENT,
+          user: process.env.EMAIL,
+          pass: process.env.EMAIL_PASSWORD,
         },
       });
 
       const mailOptions = {
-        from: process.env.EMAILCLIENT,
+        from: process.env.EMAIL,
         to: correo,
         subject: 'Restablecimiento de contraseña',
-        html: `<h1>¡Hola!</h1><p>Correo:${correo}</p><p>Contraseña:${row[0].password}`
+        html: `<h1>¡Hola!</h1><p>Correo:${correo}</p><p>Contraseña:${row.password}`
         // html body
       };
 
