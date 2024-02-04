@@ -1,5 +1,4 @@
 // -*- coding: utf-8 -*-
-require('dotenv').config();
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const fs = require('fs');
